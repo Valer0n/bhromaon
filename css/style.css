@@ -283,29 +283,29 @@ main .feedback h4 {
   text-align: center;
   margin-bottom: 25px;
 }
-main .feedback .feedback__wrapper {
+main .feedback__wrapper {
   padding: 10px 15px;
   background-color: #333333;
 }
-main .feedback .feedback__wrapper--photo img {
+main .feedback__wrapper--photo img {
   max-width: 100%;
   height: auto;
   margin-bottom: 5px;
 }
-main .feedback .feedback__wrapper--text {
+main .feedback__wrapper--text {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
 }
-main .feedback .feedback__wrapper--text h5 {
+main .feedback__wrapper--text h5 {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-main .feedback .feedback__wrapper--text blockquote p {
+main .feedback__wrapper--text blockquote p {
   font-size: 14px;
   line-height: 26px;
 }
-main .feedback .feedback__wrapper--text blockquote p::before {
+main .feedback__wrapper--text blockquote p::before {
   content: url("../img/quote-left-solid.svg");
   margin-right: 5px;
 }
@@ -353,6 +353,24 @@ main .feedback .feedback__wrapper--text blockquote p::before {
   fill: #5474FD;
 }
 
+@media only screen and (min-width: 650px) {
+  main .choose-us__text p {
+    font-size: 16px;
+  }
+  main .spain__text {
+    max-width: 50vh;
+  }
+  main .spain-2__text {
+    margin-left: auto;
+  }
+  main .feedback__wrapper {
+    max-width: 50vh;
+    margin: 0 auto;
+  }
+  main .feedback__wrapper--photo {
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .header__hero h2 {
     font-size: 48px;
@@ -443,9 +461,6 @@ main .feedback .feedback__wrapper--text blockquote p::before {
   main .choose-us__text h3 {
     font-size: 36px;
     margin-bottom: 50px;
-  }
-  main .choose-us__text p {
-    font-size: 16px;
   }
   main .choose-us__text p:last-child {
     margin-bottom: 45px;
@@ -541,6 +556,9 @@ main .feedback .feedback__wrapper--text blockquote p::before {
   main .spain-2 .container {
     justify-content: flex-end;
   }
+  main .spain-2__text {
+    margin-left: 0;
+  }
   main .feedback {
     padding: 130px 0 200px;
     background-position: center;
@@ -549,21 +567,26 @@ main .feedback .feedback__wrapper--text blockquote p::before {
     font-size: 36px;
     margin-bottom: 90px;
   }
-  main .feedback .feedback__wrapper {
-    padding: 0px;
+  main .feedback__wrapper {
+    max-width: unset;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0px;
   }
-  main .feedback .feedback__wrapper--photo img {
+  main .feedback__wrapper--photo {
+    text-align: unset;
+  }
+  main .feedback__wrapper--photo img {
     min-width: 100%;
     max-width: unset;
     height: auto;
     margin-bottom: 0px;
   }
-  main .feedback .feedback__wrapper--text {
+  main .feedback__wrapper--text {
     padding: 50px 25px 40px 60px;
   }
-  main .feedback .feedback__wrapper--text blockquote p {
+  main .feedback__wrapper--text blockquote p {
     font-size: 16px;
   }
 
