@@ -239,6 +239,9 @@
                             color: $color-white;
                             background-color: $color-blue;
                             cursor: pointer;
+                            &:hover {
+                                color: $color-red;
+                            }
                         }
                     }
                     &__photo {
@@ -339,6 +342,9 @@
                             border: none;
                             padding: 10px 25px;
                             cursor: pointer;
+                            &:hover {
+                                color: $color-red;
+                            }
                         }
                     }
                 }
@@ -581,9 +587,6 @@
                                 min-height: 63px;
                                 font-size: 16px;
                                 line-height: 26px;
-                                &:hover {
-                                    color: $color-red;
-                                }
                             }
                         }
                         &__photo {
@@ -666,9 +669,6 @@
                             button {
                                 min-width: 228px;
                                 min-height: 63px;
-                                &:hover {
-                                    color: $color-red;
-                                }
                             }
                         }
                     }

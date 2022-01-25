@@ -226,6 +226,9 @@ body {
   background-color: #5474FD;
   cursor: pointer;
 }
+.choose-us__text button:hover {
+  color: #ff0000;
+}
 .choose-us__photo ul {
   list-style: none;
 }
@@ -321,6 +324,9 @@ body {
   border: none;
   padding: 10px 25px;
   cursor: pointer;
+}
+.spain__text button:hover {
+  color: #ff0000;
 }
 
 .spain-2 {
@@ -541,9 +547,6 @@ body {
     font-size: 16px;
     line-height: 26px;
   }
-  .choose-us__text button:hover {
-    color: #ff0000;
-  }
   .choose-us__photo ul li img {
     max-width: 100%;
   }
@@ -621,9 +624,6 @@ body {
   .spain__text button {
     min-width: 228px;
     min-height: 63px;
-  }
-  .spain__text button:hover {
-    color: #ff0000;
   }
 
   .spain-2 {
