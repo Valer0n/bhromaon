@@ -1,149 +1,205 @@
-            $color-white: #fff;
-            $color-black: #000;
-            $color-dark-white: #E8E8E8;
-            $color-light-black: #232323;
-            $color-gray: #999999;
-            $color-gray-black: #333333;
-            $color-blue: #5474FD;
-            * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-                line-height: 1;
-                scroll-behavior: smooth;
-            }
-            
-            .container {
-                max-width: 1110px;
-                padding: 0 15px;
-                margin: 0 auto;
-            }
-            
-            .visually-hidden {
-                display: none;
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                border: 0;
-                padding: 0;
-                white-space: nowrap;
-                clip-path: inset(100%);
-                clip: rect(0 0 0 0);
-                overflow: hidden;
-            }
-            
-            body {
-                color: $color-white;
-                background-color: $color-black;
-            }
-            
-            .header {
-                &__hero {
-                    font-family: 'Josefin Sans', sans-serif;
-                    min-height: 100vh;
-                    position: relative;
-                    display: flex;
-                    background-image: url("../img/background-1.jpg");
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    .container {
+                $color-white: #fff;
+                $color-black: #000;
+                $color-dark-white: #E8E8E8;
+                $color-light-black: #232323;
+                $color-gray: #999999;
+                $color-gray-black: #333333;
+                $color-blue: #5474FD;
+                $color-red: #ff0000;
+                * {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1;
+                    scroll-behavior: smooth;
+                }
+                
+                .container {
+                    max-width: 1110px;
+                    padding: 0 15px;
+                    margin: 0 auto;
+                }
+                
+                .visually-hidden {
+                    display: none;
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    margin: -1px;
+                    border: 0;
+                    padding: 0;
+                    white-space: nowrap;
+                    clip-path: inset(100%);
+                    clip: rect(0 0 0 0);
+                    overflow: hidden;
+                }
+                
+                body {
+                    color: $color-white;
+                    background-color: $color-black;
+                }
+                
+                .header {
+                    &__hero {
+                        font-family: 'Josefin Sans', sans-serif;
+                        min-height: 100vh;
+                        position: relative;
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    h2 {
-                        font-weight: 700;
-                        font-size: 30px;
-                        text-align: center;
-                        letter-spacing: 4px;
-                        text-transform: uppercase;
-                    }
-                    p {
-                        font-weight: 400;
-                        font-size: 18px;
-                        text-align: center;
-                        letter-spacing: 2px;
-                        margin-bottom: 50px;
-                    }
-                    &--search {
-                        input[type="search"] {
-                            display: none;
+                        background-image: url("../img/background-1.jpg");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
                         }
-                        button {
-                            background-color: $color-blue;
-                            color: $color-white;
-                            padding: 4px 7px;
-                            border: none;
-                            border-radius: 10px;
-                            cursor: pointer;
-                            span {
+                        h2 {
+                            font-weight: 700;
+                            font-size: 30px;
+                            text-align: center;
+                            letter-spacing: 4px;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            font-weight: 400;
+                            font-size: 18px;
+                            text-align: center;
+                            letter-spacing: 2px;
+                            margin-bottom: 50px;
+                        }
+                        &--search {
+                            input[type="search"] {
                                 display: none;
                             }
-                            svg {
-                                fill: $color-white;
+                            button {
+                                background-color: $color-blue;
+                                color: $color-white;
+                                padding: 4px 7px;
+                                border: none;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                span {
+                                    display: none;
+                                }
+                                svg {
+                                    fill: $color-white;
+                                }
+                            }
+                        }
+                        &--scroll {
+                            position: absolute;
+                            bottom: 15px;
+                            cursor: pointer;
+                            a {
+                                text-decoration: none;
+                                font-size: 14px;
+                                letter-spacing: 2.8px;
+                                color: $color-white;
+                                &:hover {
+                                    color: $color-red;
+                                }
+                                &::after {
+                                    content: url("../img/icon-scroll.svg");
+                                    display: block;
+                                    text-align: center;
+                                    margin-top: 7px;
+                                }
                             }
                         }
                     }
-                    &--scroll {
-                        position: absolute;
-                        bottom: 15px;
-                        cursor: pointer;
+                    &__menu {
+                        background-color: $color-blue;
+                        padding: 10px 0;
+                        .container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
                         a {
                             text-decoration: none;
-                            font-size: 14px;
-                            letter-spacing: 2.8px;
+                            text-transform: uppercase;
                             color: $color-white;
-                            &:hover {
-                                color: $color-black;
+                        }
+                        &--logo {
+                            font-family: 'Josefin Sans', sans-serif;
+                            font-weight: 700;
+                            font-size: 24px;
+                            letter-spacing: 2.4px;
+                        }
+                        .menu__nav {
+                            .button-menu {
+                                position: relative;
+                                z-index: 20;
+                                display: flex;
+                                border: none;
+                                background-color: transparent;
+                                cursor: pointer;
+                                svg {
+                                    fill: $color-white;
+                                }
+                                .icon-close {
+                                    display: none;
+                                }
                             }
-                            &::after {
-                                content: url("../img/icon-scroll.svg");
-                                display: block;
-                                text-align: center;
-                                margin-top: 7px;
+                            ul {
+                                position: fixed;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                z-index: 10;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                list-style: none;
+                                background-image: url('../img/background-1.jpg');
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                padding: 30px 15px;
+                                transition-property: transform;
+                                transition-duration: 0.5s;
+                                transform: translateX(-100%);
+                                li {
+                                    font-family: 'Aleo', serif;
+                                    &:not(:last-child) {
+                                        margin-bottom: 30px;
+                                    }
+                                    a {
+                                        font-size: 24px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        color: $color-white;
+                                        &:hover {
+                                            color: $color-red;
+                                        }
+                                    }
+                                }
+                            }
+                            &--active {
+                                .button-menu {
+                                    position: fixed;
+                                    top: 10px;
+                                    right: 14px;
+                                    .icon-menu {
+                                        display: none;
+                                    }
+                                    .icon-close {
+                                        display: block;
+                                    }
+                                }
+                                ul {
+                                    display: flex;
+                                    transform: translateX(0);
+                                }
                             }
                         }
                     }
                 }
-                &__menu {
-                    background-color: $color-blue;
-                    padding: 10px 0;
-                    .container {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-                    a {
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        color: $color-white;
-                    }
-                    &--logo {
-                        font-family: 'Josefin Sans', sans-serif;
-                        font-weight: 700;
-                        font-size: 24px;
-                        letter-spacing: 2.4px;
-                    }
-                    nav {
-                        .button-menu {
-                            background-color: transparent;
-                            border: none;
-                            cursor: pointer;
-                            svg {
-                                fill: $color-white;
-                            }
-                        }
-                        ul {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            
-            main {
+                
                 .choose-us {
                     padding: 40px 0;
                     min-height: 50vh;
@@ -171,6 +227,7 @@
                             }
                         }
                         button {
+                            width: 100%;
                             font-family: 'Aleo', serif;
                             font-weight: 400;
                             font-size: 14px;
@@ -202,6 +259,7 @@
                         }
                     }
                 }
+                
                 .how-it-works {
                     padding-top: 40px;
                     background-color: $color-gray-black;
@@ -239,6 +297,7 @@
                         }
                     }
                 }
+                
                 .spain {
                     padding: 40px 0;
                     min-height: 50vh;
@@ -270,6 +329,7 @@
                             color: $color-dark-white;
                         }
                         button {
+                            width: 100%;
                             font-family: 'Aleo', serif;
                             font-size: 16px;
                             letter-spacing: 1.2px;
@@ -282,9 +342,11 @@
                         }
                     }
                 }
+                
                 .spain-2 {
                     background-image: url("../img/background-4.jpg");
                 }
+                
                 .feedback {
                     padding: 40px 0 50px;
                     position: relative;
@@ -331,65 +393,69 @@
                         }
                     }
                 }
-            }
-            
-            .footer {
-                padding-top: 40px;
-                padding-bottom: 40px;
-                font-family: 'Josefin Sans', sans-serif;
-                background-color: $color-light-black;
-                .container {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                h6 {
-                    font-weight: 700;
-                    font-size: 24px;
-                    letter-spacing: 3.36px;
-                    text-transform: uppercase;
-                    margin-bottom: 10px;
-                }
-                p {
-                    font-weight: 400;
-                    font-size: 16px;
-                    letter-spacing: 1.6px;
-                    margin-bottom: 15px;
-                }
-                ul {
-                    list-style: none;
-                    display: flex;
-                    li {
-                        &:not(:last-child) {
-                            margin-right: 15px;
-                        }
-                        a {
-                            text-decoration: none;
-                            cursor: pointer;
-                            svg {
-                                fill: $color-dark-white;
-                                &:hover {
-                                    fill: $color-blue;
+                
+                .footer {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    font-family: 'Josefin Sans', sans-serif;
+                    background-color: $color-light-black;
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    h6 {
+                        font-weight: 700;
+                        font-size: 24px;
+                        letter-spacing: 3.36px;
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                        letter-spacing: 1.6px;
+                        margin-bottom: 15px;
+                    }
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        li {
+                            &:not(:last-child) {
+                                margin-right: 15px;
+                            }
+                            a {
+                                text-decoration: none;
+                                cursor: pointer;
+                                svg {
+                                    fill: $color-dark-white;
+                                    &:hover {
+                                        fill: $color-red;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            
-            @media only screen and (min-width: 650px) {
-                main {
+                
+                @media only screen and (min-width: 520px) {
                     .choose-us {
                         &__text {
                             p {
                                 font-size: 16px;
+                            }
+                            button {
+                                width: unset;
                             }
                         }
                     }
                     .spain {
                         &__text {
                             max-width: 50vh;
+                            button {
+                                width: unset;
+                            }
                         }
                     }
                     .spain-2 {
@@ -407,88 +473,86 @@
                         }
                     }
                 }
-            }
-            
-            @media only screen and (min-width: 1200px) {
-                .header {
-                    &__hero {
-                        h2 {
-                            font-size: 48px;
-                            letter-spacing: 4.8px;
-                            margin-bottom: 11px;
-                        }
-                        p {
-                            font-size: 22px;
-                            letter-spacing: 6.82px;
-                        }
-                        &--search {
-                            background-color: $color-white;
-                            input[type="search"] {
-                                display: inline-block;
-                                min-width: 500px;
-                                min-height: 60px;
-                                border: 1px solid $color-white;
-                                &::placeholder {
-                                    font-family: 'Josefin Sans', sans-serif;
-                                    font-weight: 400;
-                                    font-size: 14px;
-                                    letter-spacing: 2.8px;
-                                    text-align: center;
-                                    color: $color-gray;
-                                }
+                
+                @media only screen and (min-width: 1200px) {
+                    .header {
+                        &__hero {
+                            h2 {
+                                font-size: 48px;
+                                letter-spacing: 4.8px;
+                                margin-bottom: 11px;
                             }
-                            button {
-                                padding: 15px 19px 21px 33px;
-                                background-color: $color-blue;
-                                color: $color-white;
-                                border: 1px solid $color-white;
-                                border-radius: 0px;
-                                cursor: pointer;
-                                span {
+                            p {
+                                font-size: 22px;
+                                letter-spacing: 6.82px;
+                            }
+                            &--search {
+                                background-color: $color-white;
+                                input[type="search"] {
                                     display: inline-block;
-                                    margin-right: 13px;
-                                    font-family: 'Aleo', serif;
-                                    font-weight: 400;
-                                    font-size: 14px;
-                                    text-align: center;
-                                    letter-spacing: 1.4px;
-                                    text-transform: uppercase;
+                                    min-width: 500px;
+                                    min-height: 60px;
+                                    border: 1px solid $color-white;
+                                    &::placeholder {
+                                        font-family: 'Josefin Sans', sans-serif;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        letter-spacing: 2.8px;
+                                        text-align: center;
+                                        color: $color-gray;
+                                    }
                                 }
-                                svg {
-                                    vertical-align: -2px;
-                                    &:hover {
-                                        transform: scale(1.4);
+                                button {
+                                    padding: 15px 19px 21px 33px;
+                                    background-color: $color-blue;
+                                    color: $color-white;
+                                    border: 1px solid $color-white;
+                                    border-radius: 0px;
+                                    cursor: pointer;
+                                    span {
+                                        display: inline-block;
+                                        margin-right: 13px;
+                                        font-family: 'Aleo', serif;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        letter-spacing: 1.4px;
+                                        text-transform: uppercase;
+                                    }
+                                    svg {
+                                        vertical-align: -2px;
+                                        &:hover {
+                                            transform: scale(1.4);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &__menu {
+                            padding: 30px 0;
+                            .menu__nav {
+                                .button-menu {
+                                    display: none;
+                                }
+                                ul {
+                                    position: unset;
+                                    flex-direction: row;
+                                    background-image: none;
+                                    padding: 0;
+                                    transform: unset;
+                                    li {
+                                        &:not(:last-child) {
+                                            margin-bottom: 0;
+                                            margin-right: 20px;
+                                        }
+                                        a {
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                    &__menu {
-                        padding: 30px 0;
-                        .container {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                        }
-                        nav {
-                            .button-menu {
-                                display: none;
-                            }
-                            ul {
-                                list-style: none;
-                                display: flex;
-                                li {
-                                    font-family: 'Aleo', serif;
-                                    font-size: 14px;
-                                    &:not(:last-child) {
-                                        margin-right: 20px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                main {
                     .choose-us {
                         padding: 115px 0;
                         background-position: center;
@@ -517,6 +581,9 @@
                                 min-height: 63px;
                                 font-size: 16px;
                                 line-height: 26px;
+                                &:hover {
+                                    color: $color-red;
+                                }
                             }
                         }
                         &__photo {
@@ -599,6 +666,9 @@
                             button {
                                 min-width: 228px;
                                 min-height: 63px;
+                                &:hover {
+                                    color: $color-red;
+                                }
                             }
                         }
                     }
@@ -643,19 +713,18 @@
                             }
                         }
                     }
-                }
-                .footer {
-                    padding-top: 120px;
-                    padding-bottom: 50px;
-                    p {
-                        margin-bottom: 20px;
-                    }
-                    ul {
-                        li {
-                            &:not(:last-child) {
-                                margin-right: 20px;
+                    .footer {
+                        padding-top: 120px;
+                        padding-bottom: 50px;
+                        p {
+                            margin-bottom: 20px;
+                        }
+                        ul {
+                            li {
+                                &:not(:last-child) {
+                                    margin-right: 20px;
+                                }
                             }
                         }
                     }
                 }
-            }
